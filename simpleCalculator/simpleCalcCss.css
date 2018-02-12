@@ -1,0 +1,161 @@
+.resultInput {
+	width: calc(100% - 10px);
+	height: 90%;
+	text-align: right;
+	background: linear-gradient(to bottom left, white, silver);
+	font-size: 60px;
+	vertical-align: bottom;
+}
+
+.btnInput {
+	background: linear-gradient(to bottom left, white, silver);
+	font-size: 50px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+	  
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 80px);
+	grid-gap: 3px;
+	grid-auto-rows: minmax(80px, auto);
+	width: 330px;
+	box-shadow: 3px 3px green;
+	justify-content: center;
+}
+
+.button {
+	border-style: solid;
+	border-radius: 3px;
+	/* padding: 5px; */
+	margin: 5px;
+	background: linear-gradient(to bottom left, gray, silver);
+}
+	  
+.buttonBorder {
+	border-style: solid;
+	border-radius: 3px;
+	/* padding: 5px; */
+	margin: 5px;
+	height: 25px;
+}
+	  
+.border {
+	border-style: solid;
+	border-radius: 3px;
+	padding: 2px;
+	margin: 5px;
+	background-color: lightgreen;
+}
+	  
+.textAlign {
+	text-align: center;
+}
+
+.one {
+	grid-column: 1;
+	grid-row: 4;
+}
+
+
+      .two {
+grid-column: 2;
+grid-row: 4;
+
+     }
+
+
+      .three {
+grid-column: 3;
+grid-row: 4; 
+      }
+
+
+      .four {
+grid-column: 1;
+grid-row: 3;
+      }
+
+
+      .five {
+grid-column: 2;
+grid-row: 3;
+
+      }
+
+
+      .six {
+grid-column: 3;
+grid-row: 3;
+      }
+	  
+	  .seven {
+		grid-column: 1;
+grid-row: 2;
+
+      }
+	  
+	  .eight {
+		grid-column: 2;
+grid-row: 2;
+
+      }
+	  
+	  .nine {
+		grid-column: 3;
+grid-row: 2;
+
+      }
+	  
+	  .zero {
+		grid-column: 1;
+grid-row: 5;
+
+      }
+	  
+	  .decimalSign {
+		grid-column: 2;
+grid-row: 5;
+
+      }
+	  
+	  .division {
+		grid-column: 4;
+grid-row: 2;
+
+      }
+	  
+	  .multiply {
+		grid-column: 4;
+grid-row: 3;
+
+      }
+	  
+	  .addition {
+		grid-column: 3;
+grid-row: 5;
+
+      }
+	  
+	  .subtraction {
+		grid-column: 4;
+grid-row: 4;
+
+      }
+	  
+	  .equal {
+		grid-column: 4;
+grid-row: 5;
+
+      }
+	  
+	  .inputResult {
+		grid-column: 1 / 5;
+grid-row: 1;
+
+      }
+
+	  .resultDiv {
+		  height: 100px;
+		  width: 330px;
+	  }

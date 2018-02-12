@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="simpleCalcScripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="simpleCalcCss.css"/>
+		<script type="text/javascript">
+			// Simple Calculator Scripts
+			function equals() {
+				var id = document.getElementById('mainForm');
+				var calcInput = id.result.value;
+				var calcResult = document.getElementById('mainResult');
+				console.log(calcInput);
+				console.log(eval(calcInput));
+				calcResult.equalResult.value = eval(calcInput);
+				calcInput = eval(calcInput);
+				id.result.innerHTML = eval(calcInput);
+			}
+
+			function clearAll() {
+				var id = document.getElementById('mainForm');
+				var calcInput = id.result.value;
+				var calcResult = document.getElementById('mainResult');
+				var resultField = calcResult.equalResult.value;
+				resultField = " ";
+				calcResult = " ";
+			}
+		</script>
+		<style type="text/css">
+			.resultInput {
+				width: calc(100% - 10px);
+				height: 90%;
+				text-align: right;
+				background: linear-gradient(to bottom left, white, silver);
+				font-size: 60px;
+				vertical-align: bottom;
+			}
+
+			.btnInput {
+				background: linear-gradient(to bottom left, white, silver);
+				font-size: 50px;
+				font-weight: bold;
+				font-family: sans-serif;
+			}
+	  
+			.wrapper {
+				display: grid;
+				grid-template-columns: repeat(4, 80px);
+				grid-gap: 3px;
+				grid-auto-rows: minmax(80px, auto);
+				width: 330px;
+				box-shadow: 3px 3px green;
+				justify-content: center;
+			}
+
+			.button {
+				border-style: solid;
+				border-radius: 3px;
+				/* padding: 5px; */
+				margin: 5px;
+				background: linear-gradient(to bottom left, gray, silver);
+			}
+	  
+			.buttonBorder {
+				border-style: solid;
+				border-radius: 3px;
+				/* padding: 5px; */
+				margin: 5px;
+				height: 25px;
+			}
+	  
+			.border {
+				border-style: solid;
+				border-radius: 3px;
+				padding: 2px;
+				margin: 5px;
+				background-color: lightgreen;
+			}
+	  
+			.textAlign {
+				text-align: center;
+			}
+
+			.one {
+				grid-column: 1;
+				grid-row: 4;
+			}
+
+
+			.two {
+				grid-column: 2;
+				grid-row: 4;
+
+			}
+
+
+			.three {
+				grid-column: 3;
+				grid-row: 4; 
+			}
+
+
+			.four {
+				grid-column: 1;
+				grid-row: 3;
+			}
+
+
+			.five {
+				grid-column: 2;
+				grid-row: 3;
+			}
+
+
+			.six {
+				grid-column: 3;
+				grid-row: 3;
+			}
+	  
+			.seven {
+				grid-column: 1;
+				grid-row: 2;
+
+			}
+	  
+			.eight {
+				grid-column: 2;
+				grid-row: 2;
+			}
+	  
+			.nine {
+				grid-column: 3;
+				grid-row: 2;
+			}
+	  
+			.zero {
+				grid-column: 1;
+				grid-row: 5;
+			}
+	  
+			.decimalSign {
+				grid-column: 2;
+				grid-row: 5;
+			}
+	  
+			.division {
+				grid-column: 4;
+				grid-row: 2;
+			}
+	  
+			.multiply {
+				grid-column: 4;
+				grid-row: 3;
+			}
+	  
+			.addition {
+				grid-column: 3;
+				grid-row: 5;
+
+			}
+	  
+			.subtraction {
+				grid-column: 4;
+				grid-row: 4;
+			}
+	  
+			.equal {
+				grid-column: 4;
+				grid-row: 5;
+			}
+	  
+			.inputResult {
+				grid-column: 1 / 5;
+				grid-row: 1;
+			}
+
+			.resultDiv {
+				height: 100px;
+				width: 330px;
+			}
+		</style>
+    </head>
+    <body style="text-align:center">
+        <form name="calculator" id="mainForm">
+            <div class="wrapper border">
+                <div class="inputResult button textAlign">
+                    <input class="resultInput" type="text" value="" name="result" readonly="true"></input>
+                </div>
+                <div class="seven button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="7" onclick="calculator.result.value += 7"></input>
+                </div>
+                <div class="eight button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="8" onclick="calculator.result.value += 8"></input>
+                </div>
+                <div class="nine button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="9" onclick="calculator.result.value += 9"></input>
+                </div>
+                <div class="division button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="/" onclick="calculator.result.value = calculator.result.value + ' ' + '/' + ' '"></input>
+                </div>
+                <div class="four button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="4" onclick="calculator.result.value += 4"></input>
+                </div>
+                <div class="five button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="5" onclick="calculator.result.value += 5"></input>
+                </div>
+                <div class="six button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="6" onclick="calculator.result.value += 6"></input>
+                </div>
+                <div class="multiply button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="*" onclick="calculator.result.value = calculator.result.value + ' ' + '*' + ' '"></input>
+                </div>
+                <div class="one button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="1" onclick="calculator.result.value += 1"></input>
+                </div>
+                <div class="two button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="2" onclick="calculator.result.value += 2"></input>
+                </div>
+                <div class="three button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="3" onclick="calculator.result.value += 3"></input>
+                </div>
+                <div class="subtraction button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="-" onclick="calculator.result.value = calculator.result.value + ' ' + '-' + ' '"></input>
+                </div>
+                <div class="zero button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="0" onclick="calculator.result.value += 0"></input>
+                </div>
+                <div class="decimalSign button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="." onclick="calculator.result.value = calculator.result.value + '.'"></input>
+                </div>
+                <div class="addition button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="+" onclick="calculator.result.value = calculator.result.value + ' ' + '+' + ' '"></input>
+                </div>
+                <div class="equal button textAlign">
+                    <input class="btnInput" type="button" style="height:100%;width:100%;" value="=" onclick="equals();"></input>
+                </div>
+            </div>
+        </form>
+        <div style="height:40px;"></div>
+        <div class="resultDiv">
+            <form id="mainResult">
+                <input type="text" style="height:25px;background-color:white;" name="equalResult" size="37" class="buttonBorder"/>
+                <br/>
+                <br/>
+                <div class="textAlign" style="height:35px;">
+                    <button onclick="clearAll();" style="background-color:silver;border-style:solid;border-color:black;height:100%;">
+                        <strong>Clear All</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
